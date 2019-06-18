@@ -7,7 +7,7 @@ import numpy as np
 
 
 def generate_dummy_data():
-    num_transactions = np.random.randint(low=1, high=2)
+    num_transactions = np.random.randint(low=1, high=50)
 
     with open("file.json", 'w+') as file:
         for i in range(num_transactions):

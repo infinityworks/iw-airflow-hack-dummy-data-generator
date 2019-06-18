@@ -22,7 +22,7 @@ def run_threaded(job_func):
     job_thread.start()
 
 
-schedule.every(5).seconds.do(run_threaded, generate_dummy_data)
+schedule.every(60).seconds.do(run_threaded, generate_dummy_data)
 
 if __name__ == "__main__":
     check_env_vars()
