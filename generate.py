@@ -11,9 +11,11 @@ import numpy as np
 def unreliably_generate_data():
     rand = np.random.randint(low=1, high=100)
 
-    if rand <= 15:
+    if rand <= 50:
+        print("generating dummy data")
         generate_dummy_data()
     else:
+        print("generating garbage")
         generate_garbage_data()
 
 

@@ -1,8 +1,6 @@
 import os
 import time
-import schedule
-import threading
-from generate import generate_dummy_data
+from generate import unreliably_generate_data
 
 
 def check_env_vars():
@@ -17,15 +15,8 @@ def check_env_vars():
                             .format(env_var=item))
 
 
-def run_threaded(job_func):
-    job_thread = threading.Thread(target=job_func)
-    job_thread.start()
-
-
-schedule.every(60).seconds.do(run_threaded, generate_dummy_data)
-
 if __name__ == "__main__":
     check_env_vars()
     while True:
-        schedule.run_pending()
-        time.sleep(1)
+        time.sleep(3)
+        unreliably_generate_data()
