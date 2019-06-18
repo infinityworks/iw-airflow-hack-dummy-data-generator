@@ -24,7 +24,7 @@ def generate_garbage_data():
         letters = string.ascii_lowercase
         file.write(''.join(random.choice(letters) for i in range(3000)))
 
-    s3_client = boto3.client('s3')
+    s3_client = boto3.resource('s3')
     bucket_name = os.getenv("OUTPUT_BUCKET")
     s3_client.Bucket(bucket_name)\
         .upload_file("garbage.json", str(dt.datetime.now()))
@@ -40,7 +40,7 @@ def generate_dummy_data():
             transaction = json.dumps(generate_dummy_customer_transaction_data())
             file.write(transaction)
 
-    s3_client = boto3.client('s3')
+    s3_client = boto3.resource('s3')
     bucket_name = os.getenv("OUTPUT_BUCKET")
     s3_client.Bucket(bucket_name)\
         .upload_file("file.json", str(dt.datetime.now()))
