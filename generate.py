@@ -2,8 +2,32 @@ import csv
 import json
 import boto3
 import os
+import random
+import string
 import datetime as dt
 import numpy as np
+
+
+def unreliably_generate_data():
+    rand = np.random.randint(low=1, high=100)
+
+    if rand <= 15:
+        generate_dummy_data()
+    else:
+        generate_garbage_data()
+
+
+def generate_garbage_data():
+    with open("garbage.json", 'w+') as file:
+        letters = string.ascii_lowercase
+        file.write(''.join(random.choice(letters) for i in range(3000)))
+
+    s3_client = boto3.client('s3')
+    bucket_name = os.getenv("OUTPUT_BUCKET")
+    s3_client.Bucket(bucket_name)\
+        .upload_file("garbage.json", str(dt.datetime.now()))
+
+    os.remove("garbage.json")
 
 
 def generate_dummy_data():
