@@ -2,6 +2,7 @@ import os
 import time
 import schedule
 import threading
+from generate import generate_dummy_data
 
 
 def check_env_vars():
@@ -12,11 +13,8 @@ def check_env_vars():
 
     for item in env_vars:
         if item not in os.environ:
-            raise Exception("Required environment variable missing: {env_var}".format(env_var=item))
-
-
-def job():
-    print("I'm running on thread %s" % threading.current_thread())
+            raise Exception("Required environment variable missing: {env_var}"
+                            .format(env_var=item))
 
 
 def run_threaded(job_func):
@@ -24,7 +22,7 @@ def run_threaded(job_func):
     job_thread.start()
 
 
-schedule.every(5).seconds.do(run_threaded, job)
+schedule.every(5).seconds.do(run_threaded, generate_dummy_data)
 
 if __name__ == "__main__":
     check_env_vars()

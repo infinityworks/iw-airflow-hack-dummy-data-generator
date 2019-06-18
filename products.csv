@@ -1,0 +1,65 @@
+product_id,product_description,price
+P01,detergent,house,134
+P02,kitchen roll,house,28
+P03,bin liners,house,108
+P04,shower gel,house,44
+P05,scented candles,house,128
+P06,fabric softener,house,231
+P07,cling film,house,190
+P08,aluminium foil,house,225
+P09,toilet paper,house,121
+P10,kitchen knife,house,116
+P11,dishwasher tablets,house,233
+P12,ice pack,house,259
+P13,men's dark green trousers,clothes,198
+P14,women's shoes,clothes,137
+P15,jumper,clothes,165
+P16,men's belt,clothes,225
+P17,women's black socks,clothes,234
+P18,men's striped socks,clothes,172
+P19,men's trainers,clothes,152
+P20,women's blouse,clothes,160
+P21,women's red dress,clothes,96
+P22,avocado,fruit_veg,233
+P23,cherries,fruit_veg,180
+P24,scotch bonnets,fruit_veg,113
+P25,peppers,fruit_veg,52
+P26,broccoli,fruit_veg,268
+P27,potatoes,fruit_veg,113
+P28,grapes,fruit_veg,101
+P29,easy peeler,fruit_veg,113
+P30,mango,fruit_veg,81
+P31,lemon grass,fruit_veg,187
+P32,onions,fruit_veg,113
+P33,apples,fruit_veg,2
+P34,raspberries,fruit_veg,130
+P35,carrot cake,sweets,220
+P36,salted caramel dark chocolate,sweets,54
+P37,gummy bears,sweets,224
+P38,kombucha,sweets,225
+P39,ice cream,sweets,126
+P40,irn bru,sweets,130
+P41,steak,food,53
+P42,chicken,food,172
+P43,mince beef,food,218
+P44,milk,food,160
+P45,hummus,food,198
+P46,activated charcoal croissant,food,247
+P47,whole chicken,food,203
+P48,tuna,food,184
+P49,smoked salmon,food,123
+P50,camembert,food,255
+P51,pizza,food,98
+P52,oats,food,198
+P53,peanut butter,food,240
+P54,almond milk,food,144
+P55,lentil soup,food,97
+P56,greek yoghurt,food,201
+P57,parmesan,food,124
+P58,coconut water,food,187
+P59,chicken stock,food,259
+P60,water,food,148
+P61,red wine,bws,252
+P62,gin,bws,147
+P63,cognac,bws,148
+P64,cigarettes,bws,199
